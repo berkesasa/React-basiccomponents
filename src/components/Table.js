@@ -4,7 +4,7 @@ function Table({ data, config, keyFn }) {
 
     const renderedHeaders = config.map((column) => {
 
-        if(column.header){
+        if (column.header) {
             return <Fragment key={column.label}>{column.header()}</Fragment>
         }
 
@@ -12,7 +12,6 @@ function Table({ data, config, keyFn }) {
             <th key={column.label}>{column.label}</th>
         )
     })
-
 
     const renderedRows = data.map((rowData) => {
 
@@ -23,7 +22,7 @@ function Table({ data, config, keyFn }) {
         })
 
         return (
-            <tr className="border-b" key={keyFn(rowData)}>
+            <tr className="border-b hover:bg-blue-50" key={keyFn(rowData)}>
                 {renderedCells}
             </tr>
         )
@@ -36,7 +35,7 @@ function Table({ data, config, keyFn }) {
                     {renderedHeaders}
                 </tr>
             </thead>
-            <tbody>
+            <tbody className="text-center">
                 {renderedRows}
             </tbody>
         </table>
