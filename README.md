@@ -18,7 +18,7 @@ This project contains different component structures that can be used in React. 
 - Accordion Structure
 - Buttons
 - Modal
-- Sortable and Customizable Table 
+- Sortable and Customizable Table with Custom Hook
 ## Getting Started
 
 To get started with this project, follow these steps:
